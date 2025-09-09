@@ -1,0 +1,35 @@
+##Insert into users tables
+
+INSERT INTO users VALUE 
+{  
+	'id': 'TESTUSER22',
+	'name': 'John Doe',
+	'password': 'test1234@!',
+	'user_type': 'customer'
+}
+
+
+##Insert into accounts table
+
+INSERT INTO accounts VALUE 
+{  
+   'acc_id' : 360110001,
+   'acc_type' :'savings',
+   'balance': 219000,
+   'cust_id' : 100050001,
+   'last_update': '2022-10-26',
+   'message': 'Account in active status',
+   'status': 'active'
+}
+
+
+INSERT INTO accounts VALUE 
+{  
+   'acc_id' : 360110002,
+   'acc_type' :'checking',
+   'balance': 200000,
+   'cust_id' : 100050001,
+   'last_update': '2021-10-26',
+   'message': 'Account in active status',
+   'status': 'active'
+}

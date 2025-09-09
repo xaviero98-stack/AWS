@@ -1,0 +1,25 @@
+import json
+import boto3
+import os
+
+def lambda_handler(event, context):
+    
+    # grab environment variables
+    SOURCE_BUCKET_NAME = os.environ['SOURCE_BUCKET_NAME']
+    DESTINATION_BUCKET_NAME = os.environ['DESTINATION_BUCKET_NAME']
+    
+    s3 = boto3.resource('s3')
+    copy_source = {
+        'Bucket': SOURCE_BUCKET_NAME,
+        'Key': 'loan_application_form.pdf'
+    }
+    
+    for x in range(20):
+        file_name = 'loan_application_form_' + str(x) + '.pdf'
+        print("Copying file " + file_name)
+        s3.meta.client.copy(copy_source, DESTINATION_BUCKET_NAME, file_name)
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }

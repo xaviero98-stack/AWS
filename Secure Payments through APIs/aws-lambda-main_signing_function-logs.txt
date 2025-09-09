@@ -1,0 +1,36 @@
+2025-08-25T08:02:20.336Z
+INIT_START Runtime Version: python:3.11.v83 Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:26afe95b80f712a3037463ff3166f54bef5aa010c870d7110cc2ce1e1233a3d5
+2025-08-25T08:02:20.723Z
+[INFO] 2025-08-25T08:02:20.723Z Found credentials in environment variables.
+2025-08-25T08:02:20.904Z
+START RequestId: 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Version: $LATEST
+2025-08-25T08:02:20.905Z
+[INFO] 2025-08-25T08:02:20.905Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Received event in frontend customer API Gateway.
+2025-08-25T08:02:20.905Z
+[INFO] 2025-08-25T08:02:20.905Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 {"resource": "/", "path": "/", "httpMethod": "POST", "headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Content-Type": "application/xml", "Host": "htmgn040k4.execute-api.us-east-1.amazonaws.com", "User-Agent": "python-requests/2.32.4", "X-Amzn-Trace-Id": "Root=1-68ac188c-7d304fe71bee9e8436bad636", "X-Forwarded-For": "35.175.145.12", "X-Forwarded-Port": "443", "X-Forwarded-Proto": "https"}, "multiValueHeaders": {"Accept": ["*/*"], "Accept-Encoding": ["gzip, deflate"], "Content-Type": ["application/xml"], "Host": ["htmgn040k4.execute-api.us-east-1.amazonaws.com"], "User-Agent": ["python-requests/2.32.4"], "X-Amzn-Trace-Id": ["Root=1-68ac188c-7d304fe71bee9e8436bad636"], "X-Forwarded-For": ["35.175.145.12"], "X-Forwarded-Port": ["443"], "X-Forwarded-Proto": ["https"]}, "queryStringParameters": null, "multiValueQueryStringParameters": null, "pathParameters": null, "stageVariables": null, "requestContext": {"resourceId": "ywpjxxvhc8", "resourcePath": "/", "httpMethod": "POST", "extendedRequestId": "P2jF8HtQoAMEaVQ=", "requestTime": "25/Aug/2025:08:02:20 +0000", "path": "/v1/", "accountId": "447412061590", "protocol": "HTTP/1.1", "stage": "v1", "domainPrefix": "htmgn040k4", "requestTimeEpoch": 1756108940057, "requestId": "20a27d79-635e-451b-ba66-920f800c7165", "identity": {"cognitoIdentityPoolId": null, "accountId": null, "cognitoIdentityId": null, "caller": null, "sourceIp": "35.175.145.12", "principalOrgId": null, "accessKey": null, "cognitoAuthenticationType": null, "cognitoAuthenticationProvider": null, "userArn": null, "userAgent": "python-requests/2.32.4", "user": null}, "domainName": "htmgn040k4.execute-api.us-east-1.amazonaws.com", "deploymentId": "8n1c3c", "apiId": "htmgn040k4"}, "body": "<?xml version=\"1.0\"?>\n<info>\n<customer id=\"101\">\n<name>Doe,John</name>\n<amount>38.95</amount>\n<type>debit</type>\n</customer>\n</info>", "isBase64Encoded": false}
+2025-08-25T08:02:20.973Z
+[INFO] 2025-08-25T08:02:20.973Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Sigature generated for the message body.
+2025-08-25T08:02:20.973Z
+[INFO] 2025-08-25T08:02:20.973Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 b'Aj\x1a&\x96}\x93\x93\x8e\xe4.o\x04\x06h;\xfaF\xefl\xea;\xdf\xb5\x0f\x18y\xb54\x9dm\xb2\xb14x\xc1\t\x85t\x83-Q\xf7\x8a\x97\xb3#K\xfa+N\x1c\x81\x94\xa3\xbe?\x8fq\xb1\x80\xfe\x8c3\x15\xbb\x15\xe2LU8+\xd83\xbc\xdf&\x97\xcdwrO\x13\xef\xfbA\x15\xe1\x12\xaf\xc6E\x9f\xb4\xa3MY\xdc\x1e\xf1\xd2I\xf5_DS\x11#\xa9\xedN\xb1g\x9dZ\xff\xf2\x95\xd8\x04r\x83\x91\xab=hG\x8b\n8\x07\x0bqN\xff\xfa\x940\xef\xaf\xb4:&P\xf0\xc6i~\xe6\\\x02d\xa1\xad.\xcdX\xf9\xc8\x85\x96\x94\x98l\xff\x15\x86\x8b\xdd\xea\xe7\xac\xfe\xe2%\x95\x86\xfe\xc9i\x10\xbdv\x05\x99>6\xaa\xf1\x03\xd8\xbcw9\xefp\xc2\x8b\xbf\x11\xf3 x\xf6\x8e\\^b\x81k\xe2\xc6X\xd2\x89;\x13\xff\xe5\xc0Wf\xdb\xae\xcaDW\r\x01\xcc|w\x88\x99\xc7t\x84\xdb\xe2\x9c\x9bO\x8a\x8f\xa2A>\x83}j8\x16y\xf9;\x10'
+2025-08-25T08:02:20.973Z
+[INFO] 2025-08-25T08:02:20.973Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Encoded_signature.
+2025-08-25T08:02:20.973Z
+[INFO] 2025-08-25T08:02:20.973Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 QWoaJpZ9k5OO5C5vBAZoO_pG72zqO9-1Dxh5tTSdbbKxNHjBCYV0gy1R94qXsyNL-itOHIGUo74_j3GxgP6MMxW7FeJMVTgr2DO83yaXzXdyTxPv-0EV4RKvxkWftKNNWdwe8dJJ9V9EUxEjqe1OsWedWv_yldgEcoORqz1oR4sKOAcLcU7_-pQw76-0OiZQ8MZpfuZcAmShrS7NWPnIhZaUmGz_FYaL3ernrP7iJZWG_slpEL12BZk-NqrxA9i8dznvcMKLvxHzIHj2jlxeYoFr4sZY0ok7E__lwFdm267KRFcNAcx8d4iZx3SE2-Kcm0-Kj6JBPoN9ajgWefk7EA==
+2025-08-25T08:02:20.973Z
+[INFO] 2025-08-25T08:02:20.973Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Data with encoded signature.
+2025-08-25T08:02:20.973Z
+[INFO] 2025-08-25T08:02:20.973Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 {'jwtData': '<?xml version="1.0"?>\n<info>\n<customer id="101">\n<name>Doe,John</name>\n<amount>38.95</amount>\n<type>debit</type>\n</customer>\n</info>.QWoaJpZ9k5OO5C5vBAZoO_pG72zqO9-1Dxh5tTSdbbKxNHjBCYV0gy1R94qXsyNL-itOHIGUo74_j3GxgP6MMxW7FeJMVTgr2DO83yaXzXdyTxPv-0EV4RKvxkWftKNNWdwe8dJJ9V9EUxEjqe1OsWedWv_yldgEcoORqz1oR4sKOAcLcU7_-pQw76-0OiZQ8MZpfuZcAmShrS7NWPnIhZaUmGz_FYaL3ernrP7iJZWG_slpEL12BZk-NqrxA9i8dznvcMKLvxHzIHj2jlxeYoFr4sZY0ok7E__lwFdm267KRFcNAcx8d4iZx3SE2-Kcm0-Kj6JBPoN9ajgWefk7EA=='}
+2025-08-25T08:02:21.472Z
+[INFO] 2025-08-25T08:02:21.472Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Sent logs to Amazon Kinesis Data Firehose and stored logs in an Amazon S3 logs bucket.
+2025-08-25T08:02:21.472Z
+[INFO] 2025-08-25T08:02:21.472Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 {'status_code': 200, 'response': 'Success! Signature is verified!', 'verified': True, 'data': {'jwtData': '<?xml version="1.0"?>\n<info>\n<customer id="101">\n<name>Doe,John</name>\n<amount>38.95</amount>\n<type>debit</type>\n</customer>\n</info>.QWoaJpZ9k5OO5C5vBAZoO_pG72zqO9-1Dxh5tTSdbbKxNHjBCYV0gy1R94qXsyNL-itOHIGUo74_j3GxgP6MMxW7FeJMVTgr2DO83yaXzXdyTxPv-0EV4RKvxkWftKNNWdwe8dJJ9V9EUxEjqe1OsWedWv_yldgEcoORqz1oR4sKOAcLcU7_-pQw76-0OiZQ8MZpfuZcAmShrS7NWPnIhZaUmGz_FYaL3ernrP7iJZWG_slpEL12BZk-NqrxA9i8dznvcMKLvxHzIHj2jlxeYoFr4sZY0ok7E__lwFdm267KRFcNAcx8d4iZx3SE2-Kcm0-Kj6JBPoN9ajgWefk7EA=='}, 'event_timestamp': 1756108940}
+2025-08-25T08:02:21.472Z
+[INFO] 2025-08-25T08:02:21.472Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Received Kinesis Data Firehose response.
+2025-08-25T08:02:21.472Z
+[INFO] 2025-08-25T08:02:21.472Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 {'RecordId': '4uRkJ95ZJPs5Z+Wqe8k8B2uuIYr8H+f5PL2zE/2Hph3onXnhQduD3iqgXyvfkxSk+ojZ5O99naoMmHPt8+PK6VvYoncx3/wMePL1nFALFDFHX3Wio4PcJXTKIcPZiusDWVO/iVfO1ur7UUU8g4AYxq4lCbKf4lsMETE/TzvBPY1zQemRe5eN+XvSNZl2ECavZst150YGapuYspK7TEILdvGoBtZlsFTJ', 'Encrypted': False, 'ResponseMetadata': {'RequestId': 'e45766ab-80a6-ed8b-8571-7c66e432eacb', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'e45766ab-80a6-ed8b-8571-7c66e432eacb', 'x-amz-id-2': 'Y4GJi4FY0+KBeMwU+d61BCOL891u5ssg1crfEIim9t2bRWEJwA4a4a/WxbO6+Ovl54ddVfSWKpev8QsgnE0qzZ2z0BGa/Rh7', 'content-type': 'application/x-amz-json-1.1', 'content-length': '257', 'date': 'Mon, 25 Aug 2025 08:02:21 GMT'}, 'RetryAttempts': 0}}
+2025-08-25T08:02:21.472Z
+[INFO] 2025-08-25T08:02:21.472Z 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Success! Verify signature passed.
+2025-08-25T08:02:21.475Z
+END RequestId: 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89
+2025-08-25T08:02:21.475Z
+REPORT RequestId: 2ebfe90b-954c-45f1-9b1c-4b64c4f2ae89 Duration: 569.78 ms Billed Duration: 570 ms Memory Size: 512 MB Max Memory 
