@@ -2,7 +2,7 @@
 
 In this AWS lab we are going to create a Data Lake in AWS using Glue for processing and to use a catalog, Lake Formation for permissions, S3 for the underlying data storage, Athena to query the results of the database and finally the datasource to nurish our data lake will be an Aurora database. Here is the overall data arquitecture:
 
-![My Image](Lab%20Data%20lake%20formation/Arquitecture%20schema.png)
+![My Image](Arquitecture%20schema.png)
 
 # Accessing Aurora
 
