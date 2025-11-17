@@ -1,0 +1,3 @@
+# Credit scoring Automation
+
+In this Lab we create an pipeline that consists of training a model on SageMaker using data stored in S3 and subsequently create an inference endpoint to serve it. We also use a Lambda function that retrieves results from the inference point and store them on a DynamoDB database as cached data is they are not yet cached so that we don't have to rerun predictions for the predicted data each time. Finally, a static website using Cloudfront and S3 provides in interface so that the bank customers can make GET calls to a RESTful API using API Gateway to initiate the Lambda process and ask for a given prediction.  
