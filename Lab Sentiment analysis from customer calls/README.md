@@ -4,7 +4,7 @@ In this lab we use Lambda, S3, Transcribe, Comprehend, Glue and Athena to create
 
 ![My Image](Lab%20Sentiment%20analysis%20from%20customer%20calls/Architecture%20schema.png)
 
-![My Image](Architecture%20schema.png)
+![My Image](Architecture schema.png)
 
 An audio file of a recorded customer call is uploaded to an Amazon S3 bucket (voip-in) from a VOIP server.
 
