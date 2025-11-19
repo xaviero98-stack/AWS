@@ -2,7 +2,7 @@
 
 In this lab we use Lambda, S3, Transcribe, Comprehend, Glue and Athena to create a data pipeline where we end up knowing about the sentiment felt by the customers on examples of calls to our company. This is the actual arquitecture we deploy:
 
-[MyImage](Architecture%20schema.png)
+![MyImage](Architecture%20schema.png)
 
 An audio file of a recorded customer call is uploaded to an Amazon S3 bucket (voip-in) from a VOIP server.
 
