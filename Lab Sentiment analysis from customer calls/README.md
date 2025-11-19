@@ -296,7 +296,7 @@ import time
 crawler_name = os.environ.get('CRAWLER_NAME')
 
 logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.INFO) 
 
 def lambda_handler(event, context):
 
@@ -336,6 +336,7 @@ This crawler function also uses an environemnt variable and it is set to the fol
 
 ![My Image](Captura%20de%20pantalla%202025-07-08%20114254.png)
 
+
 # Create the event notifications
 
 Once we have everything well set for the Lambda functions we will set up event notifications for the S3 buckets and connect them to the corresponding Lambda functions in each case. We could alternatively use Lambda triggers connected to the S3 buckets with equivalent resultant connections to the ones we will create now but in this case let's configure connections on the S3 side.
@@ -346,9 +347,55 @@ Let's see the first notification event on the bucket voip-in-xxxx, this notifica
 ![My Image](Captura%20de%20pantalla%202025-07-08%20110907.png)
 ![My Image](Captura%20de%20pantalla%202025-07-08%20110934.png)
 
-This second event notification will trigger the comprehend lambda function once new text file appear on the bucket that acts as the input bucket for comprohend lambda function:
+This second event notification will trigger the comprehend lambda function once new text file appear on the bucket that acts as the input bucket for comprehend lambda function:
 
 ![My Image](Captura%20de%20pantalla%202025-07-08%20111131.png)
 ![My Image](Captura%20de%20pantalla%202025-07-08%20111154.png)
-![My Image](Captura%20de%20pantalla%202025-07-08%2011.png)
+
+The third event notification will be the one that triggers the crawler:
+
+![My Image](Captura%20de%20pantalla%202025-07-08%20114717.png)
+![My Image](Captura%20de%20pantalla%202025-07-08%20114737.png)
+
+# Create the crawler/classifier
+
+Now we will create the crawler and to create it we will use a classifier for JSONs, this classifier is nothing more than a template the crawler will use to read the field of the JSON in a particular way, perhaps skipping some nestings or particular fields to they are not taken into account while creating the table in the Glue catalog.
+
+![My Image](Captura%20de%20pantalla%202025-07-08%20112321.png)
+
+Here we can see all the configuration used for the crawler including the classifier we created before:
+
+![My Image](Captura%20de%20pantalla%202025-07-08%20112910.png)
+
+And after running it we will see the following and the table from the JSON will have been created:
+
+![My Image](Captura%20de%20pantalla%202025-07-08%20113309.png)
+
+# Using Ahena for SQL queries over the table results:
+
+Now we can use Athena to retrieve the results of the table inside the customer-sentiment database where the crawler created the table from the JSON containing the sentiment analysis results of the three audios:
+
+![My Image](Captura%20de%20pantalla%202025-07-08%20113940.png)
+
+# Logs from Cloudwatch
+
+We can also verify everyhting went okay looking at CloudWatch logs of the transcribe Lambda, this is an example of the transcribe Lambda:
+
+![My Image](Captura%20de%20pantalla%202025-07-08%20111932.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
