@@ -5,6 +5,8 @@ The arquitecture schema is the following one:
 
 ![My Image](Arquitecture%20schema.png)
 
+# S3 Buckets
+
 The lab initiates with the ingress and analytics buckets already created with server-side encryption using KMS. If we navigate to the properties tab on the ingress bucket we will see that EventBridge is activated on the bucket, this means any event that happens inside this bucket will recorded by Eventbridge.
 
 ![My Image](Captura%20de%20pantalla%202025-07-15%20090615.png)
@@ -24,6 +26,8 @@ Each bucket serves a different but complementary purpose:
 Now we will navigate to the Lambda menu and configure the remaining environment variable with the name of the vault bucket, the rest of the variables already have the values set the the correponding ingress and analytics buckets.
 
 ![My Image](Captura%20de%20pantalla%202025-07-15%20091222.png)
+
+# Lambda function
 
 The lambda function itself is this one:
 
@@ -269,6 +273,7 @@ def look_for_high_priority_findings(job_id):
     return False
 ```
 
+# SNS topic
 The next step consists on creating a subscription of the cyber_vault_notification topic from Amazon SNS, this subscription will consist subscribing our email to the topic so that the information published to this SNS topic is sent to our email:
 
 ![My Image](Captura%20de%20pantalla%202025-07-15%20091619.png)
@@ -278,6 +283,7 @@ Now, let's see how EventBridge has a rule that connects S3 to the Step Functions
 
 ![My Image](Captura%20de%20pantalla%202025-07-15%20091857.png)
 
+# Step fucntions 
 The state machine will appear right after we navigate to the Step Functions menu. We click on "Edit" and the editor will open for us. First of all, on the right menu inside the input/output tab, we have to select the option of "Filter input with InputPath" and fill this option with "$.detail" which will grab only the detail filed in the input JSON.
 
 
