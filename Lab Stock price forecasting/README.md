@@ -1,0 +1,5 @@
+# Stock price forecasting
+In this lab we ingest historical stock data, train a predictive model, and save the resulting predictions to a data lake for use by stock analysts. We will assume the role of a Data scientist and load and run an Amazon SageMaker notebook application to obtain historical stock data and save it to a data lake in Amazon Simple Storage Service (Amazon S3). The SageMaker notebook calls TensorFlow on AWS to train a long short- term memory (LSTM) predictive model and other tradirional ML models, using the historical stock data, and then saves prediction data to the S3 data lake. AWS Glue accesses the data lake and discovers the prediction data's schema, which is used to create tables in the AWS Glue Data Catalog. Stock analysts access the saved prediction data by running SQL queries through Amazon Athena. The analysts use a dashboard or visualization application that imports the query results from Athena.
+This is the overall arquitecture:
+
+![My Image](Arquitecture%20schema.png)
