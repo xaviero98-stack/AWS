@@ -27,8 +27,9 @@ Once it lets us in we do so and select the python kernel. Then we will be inside
 Now let's take a look a the notebook but first here is a guideline of the different satges we find in the script that serves as a general view of the purpose each stage accomplishes and how they are connected:
 
 - **Stage 1:** We install and import all necessary python libraries, this encompasses cells 1 to 3.
-- **Stage 2:** Then data is drawn from the S3 bucket, we seggregate it by firm, scale it with a MinMaxScaler and split it into test and training data. Finally, once well formatted we save it on S3 again so that we can access it from for training the LSTM later.
-- **Stage 3**:   
+- **Stage 2:** Then data is drawn from the S3 bucket, we seggregate it by firm, scale it with a MinMaxScaler and split it into test and training data. Finally, once well formatted we save it on S3 again so that we can access it from for training the LSTM later. This is done in cells 4 to 15.
+- **Stage 3**: Then, before training the LSTM we will also train a Random Forest algorithm to compare its results to the LSTM predictions, it will act as a baseline algorithm. The exact steps are gathering the test and train data for the JAJIL.CQ firm (the only one we will use to predict with both models), do some feature enginnering to create a moving average, and some delayed versions of the adjclose price (the target variable) with different shifts, and then resplit them again into train and test to fit the model using this data. Finally, we compute the RMSE (RootSquaredMeanError) and MAE (MeanAbsoluteError) to finally make a line chart with both real and predicted priced for the test data and see how much resemblant they are. This is done in cells 16 to 26.
+- 
 
 
 📓 **Notebook:** [stock_price_forecast.ipynb](stock_price_forecast.ipynb)
