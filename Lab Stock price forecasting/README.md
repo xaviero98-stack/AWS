@@ -22,6 +22,13 @@ Once it lets us in we do so and select the python kernel. Then we will be inside
 
 ![My Image](Captura%20de%20pantalla%202025-07-05%20110208.png)
 
-Now let's take a look a the notebook:
+# Jupyter Lab notebook
+
+Now let's take a look a the notebook but first here is a guideline of the different satges we find in the script that serves as a general view of the purpose each stage accomplishes and how they are connected:
+
+- **Stage 1:** We install and import all necessary python libraries, this encompasses cells 1 to 3.
+- **Stage 2:** Then data is drawn from the S3 bucket, we seggregate it by firm, scale it with a MinMaxScaler and split it into test and training data. Finally, once well formatted we save it on S3 again so that we can access it from for training the LSTM later.
+- **Stage 3**:   
+
 
 📓 **Notebook:** [stock_price_forecast.ipynb](stock_price_forecast.ipynb)
