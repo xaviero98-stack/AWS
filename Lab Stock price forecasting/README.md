@@ -47,7 +47,7 @@ Now let's take a look a the notebook but first here is a guideline of the differ
 
 📓 **Notebook:** [stock_price_forecast.ipynb](stock_price_forecast.ipynb)
 
-# Query data from Athena (Trino)
+# Register the tables in the Glue catalog 
 
 Now we have to create a database:
 
@@ -56,6 +56,8 @@ Now we have to create a database:
 But since the database will empty:
 
 ![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112455.png)
+
+# Create a crawler to scan S3 files
 
 We need to also add a crawler to scan the S3 data with predicitions and prices which will, in turn, create the table in the database with that hosts the metadata gathered by the crawler, here are shown the steps and exact confs for the crawler:
 
@@ -69,3 +71,14 @@ We need to also add a crawler to scan the S3 data with predicitions and prices w
 
 ![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112928.png)
 
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20113311.png)
+
+When we have our crawler created we just have to run it and wait for the scanning to complete:
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20113812.png)
+
+# Query data from Athena (Trino)
+
+Now we navigate to Athena and we can start crawling the results 
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20114302.png)
