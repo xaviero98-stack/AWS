@@ -37,8 +37,35 @@ Now let's take a look a the notebook but first here is a guideline of the differ
   
 - **Stage 5:** First of all, this LSTM trained model trascends scope of the Jupyter Lab environment as opposed to the Random Forest case where the model is hold on the memory of the machine running the Jupyter Lab notebook. It happens because models trained using the a SageMaker job use temporal instances so SageMaker and S3 stores the resulting model for further use. Now we can create an endpoint that will make inferences when we pass input data to it. This endpoint is an object that gets created inside the SageMaker environment and appears listed on the endpoint tab on the AWS console it also has requires AWS infrastructure (intances) to make the inferences and is scalable in case we need predictions over large amounts of input data. Once created we re-instantiate it to configure the JSON serializer so it returns predictions as a JSON and then use the test data for the LSTM and shape it to be valid to the input requirements for the inference endpoint. This process is the exact same we use on the _transform_data function in the train.py script. When we obtain our predictions unscale them and we can also use RSME and MAE to compare real prices and unscaled predictions. Finally we can make a graph to see how much alike the prediction and real prices are. This process in made in cells 32 to 43.
 
+  We can see the endpoint here:
+
+  ![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20111615.png)
+
 - **Stage 6**: Once we have it all we can save the dataframe of with real prices and predictions as a parquet file inside S3.
 
   
 
 📓 **Notebook:** [stock_price_forecast.ipynb](stock_price_forecast.ipynb)
+
+# Query data from Athena (Trino)
+
+Now we have to create a database:
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112410.png)
+
+But since the database will empty:
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112455.png)
+
+We need to also add a crawler to scan the S3 data with predicitions and prices which will, in turn, create the table in the database with that hosts the metadata gathered by the crawler, here are shown the steps and exact confs for the crawler:
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112551.png)
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112740.png)
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112714.png)
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112838.png)
+
+![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20112928.png)
+
