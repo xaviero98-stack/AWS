@@ -29,7 +29,7 @@ Now we will navigate to the Lambda menu and configure the remaining environment 
 
 # Lambda function
 
-The lambda function itself is this one:
+The lambda function provided by the lab is this one:
 
 ```python
 ## The CIO has instructed the cyber security team to migrate to serverless, highly decoupled ##
