@@ -80,7 +80,7 @@ When we have our crawler created we just have to run it and wait for the scannin
 
 # Query data from Athena (Trino)
 
-Now we navigate to Athena and we can start crawling the results 
+Now we navigate to Athena and we can start querying the results 
 
 ![MY IMAGE](Captura%20de%20pantalla%202025-07-05%20114302.png)
 
