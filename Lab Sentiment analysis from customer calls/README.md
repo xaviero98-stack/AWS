@@ -55,7 +55,7 @@ Before using the Lambdas for automation, let's look at the process manually with
   
 # Automation with Lambda's
 
-We will approach the automation making use of three Lambda's: comprehend, transcribe and glue_crawler.
+We will approach the automation making use of three Lambda's: comprehend, transcribe and glue_crawler. These Lambda functions are provided by the lab but the code is easily understandable and contains clarifying comments.
 
 We will take a look at the transcribe Lambda:
 
